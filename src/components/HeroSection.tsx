@@ -33,38 +33,16 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 1 }}
           className="flex justify-center gap-3 mb-6"
         >
-          <div className="flex items-center justify-center gap-2">
-            {[...Array(5)].map((_, i) => {
-              const total = 5
-              const center = Math.floor(total / 2)
-
-              // ⭐ symmetric size: 16, 18, 20, 18, 16
-              const size = 20 - Math.abs(i - center) * 2
-
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{
-                    delay: 0.8 + i * 0.1,
-                    type: "spring",
-                    stiffness: 120,
-                  }}
-                  className="flex items-center justify-center"
-                >
-                  <StarIcon
-                    size={size}
-                    className="animate-twinkle"
-                    style={{
-                      animationDelay: `${i * 0.3}s`,
-                      filter: "none"
-                    }}
-                  />
-                </motion.div>
-              )
-            })}
-          </div>
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.8 + i * 0.1, type: "spring" }}
+            >
+              <StarIcon size={12 + i * 2} className="animate-twinkle" style={{ animationDelay: `${i * 0.3}s` }} />
+            </motion.div>
+          ))}
         </motion.div>
 
         <motion.p
@@ -84,6 +62,7 @@ const HeroSection = () => {
           className="text-4xl md:text-6xl lg:text-8xl font-display font-bold text-gold-gradient star-text-shadow leading-tight mb-6"
         >
           Adam
+          <br />
           Kowalski
         </motion.h1>
 
