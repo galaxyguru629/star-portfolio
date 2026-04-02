@@ -106,7 +106,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
           className="ml-3 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 hover:bg-primary/20 transition-all duration-300 font-accent text-xs tracking-widest uppercase text-primary"
           aria-label="Toggle portfolio theme"
         >
-          {theme === "gold" ? "Crystal Theme" : "Gold Theme"}
+          {theme === "gold" ? "Blue Theme" : "Gold Theme"}
         </button>
       </div>
     </motion.nav>

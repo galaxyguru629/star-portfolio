@@ -61,13 +61,14 @@ const CONNECTIONS: Connection[] = [
   { from: "react", to: "next" },
   { from: "react", to: "tailwind" },
   { from: "ts", to: "node" },
-  { from: "node", to: "postgres" },
   { from: "node", to: "graphql" },
   { from: "docker", to: "aws" },
   { from: "docker", to: "node" },
+  { from: "docker", to: "python" },
   { from: "git", to: "docker" },
   { from: "tailwind", to: "figma" },
-  { from: "python", to: "node" },
+  { from: "figma", to: "react" },
+  { from: "python", to: "postgres" },
   { from: "graphql", to: "postgres" },
   { from: "git", to: "tailwind" },
   { from: "vue", to: "tailwind" },
@@ -177,10 +178,10 @@ const SkillsConstellation = () => {
                 return (
                   <motion.line
                     key={i}
-                    x1={from.x}
-                    y1={from.y}
-                    x2={to.x}
-                    y2={to.y}
+                    x1={`${from.x}%`}
+                    y1={`${from.y}%`}
+                    x2={`${to.x}%`}
+                    y2={`${to.y}%`}
                     stroke={
                       isActive
                         ? "hsl(var(--primary) / 0.75)"
@@ -209,16 +210,16 @@ const SkillsConstellation = () => {
 
             return (
               <motion.div
+
                 key={skill.id}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: isDimmed ? 0.15 : 1, scale: 1 } : {}}
                 transition={{ delay: 0.2 + i * 0.06, type: "spring", stiffness: 200 }}
-                className="absolute group"
                 style={{
-                  left: `${skill.x}%`,
+                  left: `${skill.x}% `,
                   top: `${skill.y}%`,
-                  transform: "translate(-50%, -50%)",
                 }}
+                className="absolute group star-translate"
                 onMouseEnter={() => setHovered(skill.id)}
                 onMouseLeave={() => setHovered(null)}
                 data-interactive
