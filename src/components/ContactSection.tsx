@@ -65,7 +65,7 @@ const ContactSection = () => {
                 rows={5}
                 data-interactive
                 className="w-full px-5 py-3 rounded-lg bg-secondary/50 border border-border font-body text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors duration-300 resize-none"
-                placeholder="Tell Adam about your project..."
+                placeholder="Tell Angelo about your project..."
                 onFocus={() => setFocused("message")}
                 onBlur={() => setFocused(null)}
               />

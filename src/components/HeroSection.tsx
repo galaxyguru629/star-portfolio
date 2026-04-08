@@ -83,9 +83,9 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-4xl md:text-6xl lg:text-8xl font-display font-bold text-gold-gradient star-text-shadow leading-tight mb-6"
         >
-          Adam
+          Angelo
           <br />
-          Kowalski
+          Santos
         </motion.h1>
 
         <motion.p

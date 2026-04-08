@@ -45,7 +45,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
         <a href="#" data-interactive className="flex items-center gap-2 group">
           <StarIcon size={20} className="group-hover:animate-pulse-glow transition-all duration-300" />
           <span className="font-display text-sm font-bold tracking-widest text-gold-gradient">
-            ADAM KOWALSKI
+            ANGELO SANTOS
           </span>
         </a>
 

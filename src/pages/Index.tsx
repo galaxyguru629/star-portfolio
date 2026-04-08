@@ -41,12 +41,12 @@ const Index = ({ theme, onToggleTheme }: IndexProps) => {
           <div className="flex items-center justify-center gap-2 mb-3">
             <StarIcon size={14} className="animate-twinkle" />
             <span className="font-display text-xs tracking-widest text-gold-gradient uppercase">
-              Crafted by Adam Kowalski
+              Crafted by Angelo Santos
             </span>
             <StarIcon size={14} className="animate-twinkle" style={{ animationDelay: "0.5s" }} />
           </div>
           <p className="text-muted-foreground text-xs font-body">
-            © {new Date().getFullYear()} Adam Kowalski — All rights reserved
+            © {new Date().getFullYear()} Angelo Santos — All rights reserved
           </p>
         </footer>
       </main>
